@@ -46,7 +46,7 @@ x=True
 while(x):
     mode=input("Choose your mode (e/d): ").lower()
     if mode == 'e':
-        mode="decrypt"
+        type="decrypt"
         print("____________________ Encrption started ____________________")
         key=int(input(f"Enter the key (1-{lenght}): "))
         text=input("Enter your Plaintext: ").lower()
@@ -55,7 +55,7 @@ while(x):
         print(f"Encrypted message: {final}")
 
     if mode == 'd':
-        mode="encrypt"
+        type="encrypt"
         print("____________________ Decrption started ____________________")
         key=int(input(f"Enter the key (1-{lenght}): "))
         text=input("Enter your Ciphertext: ").lower()
@@ -63,7 +63,7 @@ while(x):
         load()
         print(f"Decrypted message: {final}")
     
-    try_again=input(f"Want to {mode} the message (y/n): ")
+    try_again=input(f"Want to {type} the message (y/n): ")
     if try_again == "y":
         x=True
     else:
